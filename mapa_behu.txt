@@ -91,3 +91,10 @@ ME–AI není jen CI projekt. Je to výpravní tok duše mezi výpravcem Lukáš
 💬 Commit: 🎩 Finalizace ME–AI • CI erb + .env + styl2 audit připraven
 🔐 Token funkční, remote propojen: ✓
 🧠 CI připraven ke spuštění (pipeline čeká na trigger)
+
+🗺️ CI orchestr ME–AI
+✅ CI_TOKEN → aktivní, masked, protected
+✅ AGENT_MODE → audit
+✅ MEAI_SHERIFF → LukasBudinsky
+🛠️ DISCORD_WEBHOOK_URL → připraveno k aktivaci
+🐍 agent.py → načítá proměnné, funguje
