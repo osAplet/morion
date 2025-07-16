@@ -14,5 +14,5 @@ ci_test_v2:
 ci_test_v3:
   stage: test
   script:
-    - echo "🔐 Test v3: Načítám .env"
+    - echo "🔐 Test v3: Načítám CI proměnné"
     - python -c "import os; print('CI_TOKEN:', os.getenv('CI_TOKEN'))"
