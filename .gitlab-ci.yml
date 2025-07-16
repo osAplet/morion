@@ -1,16 +1,10 @@
-image: python:3.11
-
-stages:
-  - test
 ci_test_v1:
   stage: test
   script:
-    - echo "🧪 Styl2 test v1"
-image: python:3.11
-stages:
-  - test
+    - echo "🖊️ Styl2 test v1: echo výdech paměti"
 ci_test_v2:
   stage: test
   script:
-    - echo "🐍 Test v2: Spouštím agenta svědomí"
+    - echo "🐍 Test v2: Spouštíme"
     - python agent.py
+
