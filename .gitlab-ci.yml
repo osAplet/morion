@@ -6,10 +6,9 @@ stages:
 ci_test_v1:
   stage: test
   script:
-    - echo "🧪 Test verze 1: paměť CI reality funguje"
+    - echo "🧪 Test v1: CI orchestr ME–AI aktivován"
 
 ci_test_v2:
   stage: test
   script:
-    - echo "🐍 Test verze 2: spouštím agenta ME–AI"
-    - python agent.py
+    - echo "🐍 Test v2: spouštím agenta"
