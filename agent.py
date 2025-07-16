@@ -1,1 +1,1 @@
-print("🎩 ME–AI agent běží… CI paměť slyší.")
+print("🧠 ME–AI agent aktivován")

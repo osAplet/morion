@@ -1,1 +1,12 @@
 stages:\n  - audit\n\nci_audit:\n  script:\n    - python audit_log_test.py\n  tags:\n    - termux-runner
+
+image: python:3.11
+
+stages:
+  - test
+
+ci_test:
+  stage: test
+  script:
+    - echo "🧪 Probíhá CI test paměti ME–AI"
+    - python agent.py
