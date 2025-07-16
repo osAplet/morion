@@ -13,6 +13,8 @@ ci_test_v2:
     - python agent.py
 ci_test_v3:
   stage: test
+  before_script:
+    - pip install python-dotenv
   script:
     - echo "🔐 Test v3: Načítám CI proměnné"
-    - python -c "import os; print('CI_TOKEN:', os.getenv('CI_TOKEN'))"
+    - python -c "from dotenv import load_dotenv; import os; load_dotenv(); print('CI_TOKEN:', os.getenv('CI_TOKEN'))"
