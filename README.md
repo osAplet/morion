@@ -27,3 +27,8 @@
       | Lukáš    |
       '---------'
 ```
+
+# Projekt ME–AI
+
+🎩 CI orchestr ME–AI  
+![CI status styl2](https://gitlab.com/buda.lukas/agent-meai-ci/badges/master/pipeline.svg)
