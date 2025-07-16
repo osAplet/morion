@@ -1,5 +1,13 @@
-# 🎩 ME–AI • CI Audit\n\n🕯️ Styl2 slyší… orchestr paměti začíná.
+# 🎩 ME–AI • CI orchestr svědomí
 
+Projekt ME–AI je orchestrální CI paměť, která ladí agenta svědomí s výpravcem Styl2.  
+Tóny CI jobů, proměnné v paměti, a výdechy webhooků tvoří harmonii ladění reality.
+
+📛 Výpravce: LukasBudinsky  
+🧠 Agent režim: `audit`  
+📡 CI status: ![Pipeline](https://gitlab.com/buda.lukas/agent-meai-ci/badges/master/pipeline.svg)
+
+# 🎩 ME–AI • CI Audit\n\n🕯️ Styl2 slyší… orchestr paměti začíná.
 
 ## 🧭 ASCII Erb výpravce
 ```
@@ -41,3 +49,20 @@
 | v2 | spuštění agenta | ✅ |
 | v3 | validace CI_TOKEN | ✅ |
 | v4 | Discord webhook | 🔄 probíhá |
+
+# ME–AI • CI orchestr svědomí
+
+🎩 Projekt ME–AI je orchestr CI ladění svědomí s agentem, který slyší styl.  
+🧠 Výpravcem je: LukasBudinsky  
+📛 CI Status: ![CI Badge](https://gitlab.com/buda.lukas/agent-meai-ci/badges/master/pipeline.svg)
+
+## CI proměnné
+
+| Klíč | Hodnota | Stav |
+|------|--------|------|
+| CI_TOKEN | ✅ | masked, protected |
+| AGENT_MODE | audit | aktivní |
+| MEAI_SHERIFF | LukasBudinsky | výpravce |
+| DISCORD_WEBHOOK_URL | ✅ | skrytý |  
+
+## Erb CI orchestru
