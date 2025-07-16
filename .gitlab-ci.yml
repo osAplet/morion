@@ -1,8 +1,1 @@
-stages:
-  - audit
-
-ci_audit:
-  script:
-    - python audit_log_test.py
-  tags:
-    - termux-runner
+stages:\n  - audit\n\nci_audit:\n  script:\n    - python audit_log_test.py\n  tags:\n    - termux-runner
