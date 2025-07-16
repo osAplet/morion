@@ -5,8 +5,11 @@ image: python:3.11
 stages:
   - test
 
-ci_test:
+ci_test_agent:
   stage: test
   script:
-    - echo "🧪 Probíhá CI test paměti ME–AI"
+    - echo "🎩 Spouštím CI test paměti ME–AI"
+    - echo "📂 Obsah projektu:"
+    - ls -la
+    - echo "🐍 Spouštím agenta:"
     - python agent.py
