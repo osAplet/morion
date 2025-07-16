@@ -2,14 +2,12 @@ image: python:3.11
 
 stages:
   - test
-
 ci_test_v1:
   stage: test
   script:
-    - echo "🧪 CI test v1: echo výdech paměti ME–AI"
-
+    - echo "🧪 Styl2 test v1"
 ci_test_v2:
   stage: test
   script:
-    - echo "🐍 CI test v2: spouštím agenta ME–AI"
+    - echo "🐍 Styl2 test v2"
     - python agent.py
