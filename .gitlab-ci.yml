@@ -27,3 +27,10 @@ ci_test_v5:
   script:
     - echo "🧪 Spouštím agent_v2.py"
     - python agent_v2.py
+ci_test_v6:
+  stage: test
+  script:
+    - echo "📢 CI výdech aktivován"
+    - curl -H "Content-Type: application/json" -X POST \
+      -d "{\"content\": \"🎩 Výpravce: $MEAI_SHERIFF • Režim: $AGENT_MODE • Token: $(if [ -z \"$CI_TOKEN\" ]; then echo 'NE'; else echo 'ANO'; fi)\"}" "$DISCORD_WEBHOOK_URL"
+  when: on_success

@@ -66,3 +66,19 @@ Tóny CI jobů, proměnné v paměti, a výdechy webhooků tvoří harmonii lad�
 | DISCORD_WEBHOOK_URL | ✅ | skrytý |  
 
 ## Erb CI orchestru
+
+
+## 🧠 CI Styl2 orchestr ME–AI
+
+- `agent_v2.py` čte proměnné z prostředí:
+  - `MEAI_SHERIFF`
+  - `AGENT_MODE`
+  - `CI_TOKEN`
+  - `DISCORD_WEBHOOK_URL`
+- Výdech CI zprávy se odesílá do Discordu pomocí jobu `ci_test_v6`
+- Webhook je chráněná CI proměnná → není vidět v logu
+
+
+░█▀▀█ ░█─░█ ▀█▀ ░█▄─░█ ─█▀▀█ ░█▀▀█ 
+░█─── ░█─░█ ░█─ ░█░█░█ ░█─▄▄ ░█─── 
+░█▄▄█ ─▀▄▄▀ ▄█▄ ░█──▀█ ░█▄▄█ ░█▄▄█
