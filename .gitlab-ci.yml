@@ -1,0 +1,10 @@
+stages:
+  - notify
+
+ci_audit_notify:
+  stage: notify
+  script:
+    - echo "📜 CI výdech zapsán do styl2_erb.md"
+    - curl -H "Content-Type: application/json" -X POST -d "{\"content\": \"✅ CI výdech zapsán do paměti ME–AI\"}" "$DISCORD_WEBHOOK_URL"
+  only:
+    - styl2-next
