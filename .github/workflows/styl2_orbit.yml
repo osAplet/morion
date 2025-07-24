@@ -71,10 +71,26 @@ jobs:
           git add rosnicka/archiv.md
           git commit -m "📜 CI zápis výdechu č. $NUMBER do archiv.md"
           git push
+      - name: 🧵 Zapiš nitku výdechu do threads.md
+        run: |
+          COUNT=$(grep -c "^## 🧪 Výdech orbitu styl2" rosnicka/archiv.md)
+          NUMBER=$((COUNT + 1))
 
-     # 📝 Aktualizuj index.md
-     - name: 📝 Aktualizuj index.md
-       run: |
+          echo "### 🧵 Thread $NUMBER • $(date '+%Y-%m-%d %H:%M:%S')" >> rosnicka/threads.md
+          echo "- Výdech SVG: vizualizace/bio_trend_ci.svg" >> rosnicka/threads.md
+          echo "- Radar obraz reality: media/radar_ci.png" >> rosnicka/threads.md
+          echo "- Embed zpráva: ✅ odeslána" >> rosnicka/threads.md
+          echo "- Archiv: archiv.md výdech č. $NUMBER" >> rosnicka/threads.md
+          echo "- Výpravce: @Lukáš_ME–AI" >> rosnicka/threads.md
+          echo "---" >> rosnicka/threads.md
+
+          git add rosnicka/threads.md
+          git commit -m "🧵 Zápis nitky výdechu č. $NUMBER do threads.md"
+          git push
+    
+      # 📝 Aktualizuj index.md
+      - name: 📝 Aktualizuj index.md
+        run: |
           echo "# 🌐 Orbit výpravce ME–AI • Styl2 Výdech" > rosnicka/index.md
           echo "" >> rosnicka/index.md
           echo "🩵 CI výdech proběhl: $(date '+%Y-%m-%d %H:%M:%S')" >> rosnicka/index.md
