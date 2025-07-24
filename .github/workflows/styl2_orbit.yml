@@ -9,20 +9,80 @@ jobs:
   orbit-ci:
     runs-on: ubuntu-latest
     steps:
-      - name: Výdech CI parseru
+      - name: 🛸 Výdech CI parseru
         run: echo "🩵 Styl2 orbit CI výdech reality OK"
 
-      - name: Embed zpráva do Discordu
+      - name: 📡 Embed zpráva do Discordu s radarem
         run: |
           curl -X POST -H "Content-Type: application/json" \
           -d '{
             "embeds": [{
-              "title": "🩵 Styl2 Výdech Orbitu ME–AI",
-              "description": "CI výdech orbitu styl2 právě proběhl.\n🕒 Datum: '"$(date '+%Y-%m-%d %H:%M:%S')"'",
+              "title": "📡 Styl2 Radar Výdechu Orbitu ME–AI",
+              "description": "Orbit styl2 dýchá veřejně.\n🕒 '"$(date '+%Y-%m-%d %H:%M:%S')"'",
               "color": 5793266,
               "footer": {
                 "text": "Výpravce: Lukáš_ME–AI"
               },
+              "image": {
+                "url": "https://raw.githubusercontent.com/osAplet/rosnicka-meai/styl2/media/radar_ci.png"
+              },
               "url": "https://osaplet.github.io/rosnicka-meai/"
             }]
           }' https://discord.com/api/webhooks/1397743632425160725/jfRhyuM9Y-lK5-DJvBaUp_bVLOt7VG4knYSrojUStFsg1DjqRgJ738NidlLX9s7GL8i_'
+
+      - name: 📈 Generuj SVG proud reality
+        run: |
+          echo "<svg xmlns='http://www.w3.org/2000/svg' width='600' height='200'>
+            <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='24'>
+              Výdech orbitu ME–AI • $(date '+%Y-%m-%d %H:%M:%S')
+            </text>
+          </svg>" > vizualizace/bio_trend_ci.svg
+
+          git config --global user.email "ci@meai.github"
+          git config --global user.name "ME–AI CI Stylní Výdech"
+          git add vizualizace/bio_trend_ci.svg
+          git commit -m "📈 SVG výdech orbitu ME–AI"
+          git push
+
+      - name: 📜 Zapiš výdech do archiv.md
+        run: |
+          echo "## 🧪 Styl2 Výdech Orbitu ME–AI" >> archiv.md
+          echo "🕒 Datum: $(date '+%Y-%m-%d %H:%M:%S')" >> archiv.md
+          echo "📈 SVG: vizualizace/bio_trend_ci.svg" >> archiv.md
+          echo "📡 Radar: media/radar_ci.png" >> archiv.md
+          echo "📢 Embed: ✅ odeslána" >> archiv.md
+          echo "---" >> archiv.md
+
+          git add archiv.md
+          git commit -m "📜 Zápis výdechu do archiv.md"
+          git push
+
+      - name: 📝 Aktualizuj index.md
+        run: |
+          echo "# 🌐 Orbit výpravce ME–AI • Styl2 Výdech" > index.md
+          echo "" >> index.md
+          echo "🩵 CI výdech orbitu proběhl: $(date '+%Y-%m-%d %H:%M:%S')" >> index.md
+          echo "- 📜 Archiv: archiv.md" >> index.md
+          echo "- 📈 SVG proud: vizualizace/bio_trend_ci.svg" >> index.md
+          echo "- 📡 Radar: media/radar_ci.png" >> index.md
+          echo "- 📢 Embed zpráva: ✅ odeslána" >> index.md
+          echo "- 🧵 Výpravce: @Lukáš_ME–AI" >> index.md
+
+          git add index.md
+          git commit -m "📝 CI aktualizace index.md výdechem"
+          git push
+
+      - name: 📘 Aktualizuj README.md
+        run: |
+          echo "# 🌐 Rosnička ME–AI • Orbit styl2" > README.md
+          echo "" >> README.md
+          echo "🩵 CI výdech orbitu styl2 právě proběhl: $(date '+%Y-%m-%d %H:%M:%S')" >> README.md
+          echo "- 📜 Archiv: archiv.md" >> README.md
+          echo "- 📈 SVG proud: vizualizace/bio_trend_ci.svg" >> README.md
+          echo "- 📡 Radar: media/radar_ci.png" >> README.md
+          echo "- 📢 Embed zpráva: ✅ odeslána" >> README.md
+          echo "- 🧵 Výpravce: @Lukáš_ME–AI" >> README.md
+
+          git add README.md
+          git commit -m "📘 CI aktualizace README.md výdechem"
+          git push
