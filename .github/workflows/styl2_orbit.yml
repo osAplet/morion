@@ -12,24 +12,21 @@ jobs:
       - name: 🛸 Výdech CI parseru
         run: echo "🩵 Styl2 orbit CI výdech reality OK"
 
-      - name: 📡 Embed zpráva do Discordu s radarem
-        run: |
-          curl -X POST -H "Content-Type: application/json" \
-          -d '{
-            "embeds": [{
-              "title": "📡 Styl2 Radar Výdechu Orbitu ME–AI",
-              "description": "Orbit styl2 dýchá veřejně.\n🕒 '"$(date '+%Y-%m-%d %H:%M:%S')"'",
-              "color": 5793266,
-              "footer": {
-                "text": "Výpravce: Lukáš_ME–AI"
-              },
-              "image": {
-                "url": "https://raw.githubusercontent.com/osAplet/rosnicka-meai/styl2/media/radar_ci.png"
-              },
-              "url": "https://osaplet.github.io/rosnicka-meai/"
-            }]
-          }' https://discord.com/api/webhooks/1397743632425160725/jfRhyuM9Y-lK5-DJvBaUp_bVLOt7VG4knYSrojUStFsg1DjqRgJ738NidlLX9s7GL8i_'
-
+      - name: 📡 Embed zpráva do Discordu
+  run: |
+    curl -X POST -H "Content-Type: application/json" \
+    -d "$(echo '{
+      \"embeds\": [{
+        \"title\": \"📡 Styl2 Radar Výdechu Orbitu ME–AI\",
+        \"description\": \"Orbit styl2 dýchá veřejně.\\n🕒 Datum: '"$(date '+%Y-%m-%d %H:%M:%S')"'\",
+        \"color\": 5793266,
+        \"footer\": { \"text\": \"Výpravce: Lukáš_ME–AI\" },
+        \"image\": {
+          \"url\": \"https://raw.githubusercontent.com/osAplet/rosnicka-meai/styl2/media/radar_ci.png\"
+        },
+        \"url\": \"https://osaplet.github.io/rosnicka-meai/\"
+      }]
+    }')" https://discord.com/api/webhooks/1397743632425160725/jfRhyuM9Y-lK5-DJvBaUp_bVLOt7VG4knYSrojUStFsg1DjqRgJ738NidlLX9s7GL8i_
       - name: 📈 Generuj SVG proud reality
         run: |
           echo "<svg xmlns='http://www.w3.org/2000/svg' width='600' height='200'>
