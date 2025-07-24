@@ -1,0 +1,28 @@
+name: Styl2 Výdech Orbitu ME–AI
+
+on:
+  push:
+    branches:
+      - styl2
+
+jobs:
+  orbit-ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Výdech CI parseru
+        run: echo "🩵 Styl2 orbit CI výdech reality OK"
+
+      - name: Embed zpráva do Discordu
+        run: |
+          curl -X POST -H "Content-Type: application/json" \
+          -d '{
+            "embeds": [{
+              "title": "🩵 Styl2 Výdech Orbitu ME–AI",
+              "description": "CI výdech orbitu styl2 právě proběhl.\n🕒 Datum: '"$(date '+%Y-%m-%d %H:%M:%S')"'",
+              "color": 5793266,
+              "footer": {
+                "text": "Výpravce: Lukáš_ME–AI"
+              },
+              "url": "https://osaplet.github.io/rosnicka-meai/"
+            }]
+          }' https://discord.com/api/webhooks/1397743632425160725/jfRhyuM9Y-lK5-DJvBaUp_bVLOt7VG4knYSrojUStFsg1DjqRgJ738NidlLX9s7GL8i_'
