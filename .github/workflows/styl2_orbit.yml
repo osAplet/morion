@@ -55,23 +55,23 @@ jobs:
             ]
           }')" https://discord.com/api/webhooks/1397743632425160725/jfRhyuM9Y-lK5-DJvBaUp_bVLOt7VG4knYSrojUStFsg1DjqRgJ738NidlLX9s7GL8i_ ' )
 
-      # 📜 Zapiš výdech do archiv.md
       - name: 📜 Zapiš výdech do archiv.md
-        run: |
-          echo "## 🧪 Výdech orbitu styl2 • $(date '+%Y-%m-%d')" >> rosnicka/archiv.md
-          echo "🕒 Čas: $(date '+%Y-%m-%d %H:%M:%S')" >> rosnicka/archiv.md
-          echo "📈 SVG: vizualizace/bio_trend_ci.svg" >> rosnicka/archiv.md
-          echo "📡 Radar: media/radar_ci.png" >> rosnicka/archiv.md
-          echo "📢 Embed zpráva: ✅ odeslána" >> rosnicka/archiv.md
-          echo "---" >> rosnicka/archiv.md
+  run: |
+    echo "## 🧪 Výdech orbitu styl2 • $(date '+%Y-%m-%d')" >> rosnicka/archiv.md
+    echo "🕒 Čas: $(date '+%Y-%m-%d %H:%M:%S')" >> rosnicka/archiv.md
+    echo "📈 SVG proud: vizualizace/bio_trend_ci.svg" >> rosnicka/archiv.md
+    echo "📡 Radar: media/radar_ci.png" >> rosnicka/archiv.md
+    echo "📢 Embed zpráva: ✅ odeslána" >> rosnicka/archiv.md
+    echo "🧵 Výpravce: @Lukáš_ME–AI" >> rosnicka/archiv.md
+    echo "---" >> rosnicka/archiv.md
 
-          git add rosnicka/archiv.md
-          git commit -m "📜 CI zápis výdechu do archiv.md"
-          git push
+    git add rosnicka/archiv.md
+    git commit -m "📜 CI zápis výdechu do archiv.md"
+    git push
 
-      # 📝 Aktualizuj index.md
-      - name: 📝 Aktualizuj index.md
-        run: |
+     # 📝 Aktualizuj index.md
+     - name: 📝 Aktualizuj index.md
+       run: |
           echo "# 🌐 Orbit výpravce ME–AI • Styl2 Výdech" > rosnicka/index.md
           echo "" >> rosnicka/index.md
           echo "🩵 CI výdech proběhl: $(date '+%Y-%m-%d %H:%M:%S')" >> rosnicka/index.md
