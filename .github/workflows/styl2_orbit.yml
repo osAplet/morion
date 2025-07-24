@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - styl2
-
 jobs:
   orbit-ci:
     runs-on: ubuntu-latest
@@ -26,7 +25,7 @@ jobs:
         },
         \"url\": \"https://osaplet.github.io/rosnicka-meai/\"
       }]
-    }')" https://discord.com/api/webhooks/1397743632425160725/jfRhyuM9Y-lK5-DJvBaUp_bVLOt7VG4knYSrojUStFsg1DjqRgJ738NidlLX9s7GL8i_
+    }')" https://discord.com/api/webhooks/1397743632425160725/jfRhyuM9Y-lK5-DJvBaUp_bVLOt7VG4knYSrojUStFsg1DjqRgJ738NidlLX9s7GL8i_'
       - name: 📈 Generuj SVG proud reality
         run: |
           echo "<svg xmlns='http://www.w3.org/2000/svg' width='600' height='200'>
