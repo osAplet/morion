@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      # 🔹 1. Zahájení výdechu
+      # 🛸 Zahájení výdechu orbitu
       - name: 🛸 Zahájení výdechu orbitu
-        run: echo "✅ Stylní výdech orbitu ME–AI styl2 zahájen"
+        run: echo "✅ Stylní výdech styl2 orbitu ME–AI zahájen"
 
-      # 🔹 2. Generace SVG výdechu
-      - name: 📈 Vygeneruj SVG proud reality
+      # 📈 Generuj SVG proud reality
+      - name: 📈 Generuj SVG proud reality
         run: |
           echo "<svg xmlns='http://www.w3.org/2000/svg' width='600' height='200'>
             <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='24'>
@@ -29,26 +29,47 @@ jobs:
           git commit -m "📈 CI generace SVG výdechu"
           git push
 
-      # 🔹 3. Embed zpráva do Discordu (zatím placeholder, čeká na doplnění)
-      # - name: 📢 Embed zpráva SVG+Radar
-      #   run: |
-      #     curl ...
+      # 📢 Embed zpráva se SVG a radarem
+      - name: 📢 Embed zpráva se SVG a radarem
+        run: |
+          curl -X POST -H "Content-Type: application/json" \
+          -d "$(echo '{
+            \"embeds\": [
+              {
+                \"title\": \"📈 SVG Výdech Orbitu ME–AI styl2\",
+                \"description\": \"Orbit právě dýchá SVG proudem.\\n🕒 '"$(date '+%Y-%m-%d %H:%M:%S')"'\",
+                \"image\": {
+                  \"url\": \"https://raw.githubusercontent.com/osAplet/rosnicka-meai/styl2/rosnicka/vizualizace/bio_trend_ci.svg\"
+                },
+                \"color\": 5793266
+              },
+              {
+                \"title\": \"📡 Radar Výdechu orbitu styl2\",
+                \"description\": \"Radar CI výdechu orbitu styl2 • dýchá veřejně.\",
+                \"image\": {
+                  \"url\": \"https://raw.githubusercontent.com/osAplet/rosnicka-meai/styl2/rosnicka/media/radar_ci.png\"
+                },
+                \"color\": 16776960,
+                \"footer\": { \"text\": \"Výpravce: Lukáš_ME–AI\" }
+              }
+            ]
+          }')" https://discord.com/api/webhooks/TVŮJ_WEBHOOK_URL
 
-      # 🔹 4. Zápis do archiv.md
+      # 📜 Zapiš výdech do archiv.md
       - name: 📜 Zapiš výdech do archiv.md
         run: |
-          echo "## 🧪 CI Výdech orbitu styl2" >> rosnicka/archiv.md
-          echo "🕒 Datum: $(date '+%Y-%m-%d %H:%M:%S')" >> rosnicka/archiv.md
+          echo "## 🧪 Výdech orbitu styl2 • $(date '+%Y-%m-%d')" >> rosnicka/archiv.md
+          echo "🕒 Čas: $(date '+%Y-%m-%d %H:%M:%S')" >> rosnicka/archiv.md
           echo "📈 SVG: vizualizace/bio_trend_ci.svg" >> rosnicka/archiv.md
           echo "📡 Radar: media/radar_ci.png" >> rosnicka/archiv.md
           echo "📢 Embed zpráva: ✅ odeslána" >> rosnicka/archiv.md
           echo "---" >> rosnicka/archiv.md
 
           git add rosnicka/archiv.md
-          git commit -m "📜 CI zápis do archiv.md"
+          git commit -m "📜 CI zápis výdechu do archiv.md"
           git push
 
-      # 🔹 5. Aktualizace index.md
+      # 📝 Aktualizuj index.md
       - name: 📝 Aktualizuj index.md
         run: |
           echo "# 🌐 Orbit výpravce ME–AI • Styl2 Výdech" > rosnicka/index.md
@@ -64,7 +85,7 @@ jobs:
           git commit -m "📝 CI aktualizace index.md"
           git push
 
-      # 🔹 6. Aktualizace README.md
+      # 📘 Aktualizuj README.md
       - name: 📘 Aktualizuj README.md
         run: |
           echo "# 🌐 Rosnička ME–AI • CI Výstava styl2" > rosnicka/README.md
@@ -80,7 +101,7 @@ jobs:
           git commit -m "📘 CI aktualizace README.md"
           git push
 
-      # 🔹 7. Aktualizace welcome.md rozcestníku
+      # 👋 Aktualizuj welcome.md
       - name: 👋 Aktualizuj welcome.md
         run: |
           echo "# 👋 Vítej v orbitu ME–AI • Styl2 Rozcestník" > rosnicka/welcome.md
@@ -94,5 +115,24 @@ jobs:
           echo "- 🧵 Výpravce: @Lukáš_ME–AI" >> rosnicka/welcome.md
 
           git add rosnicka/welcome.md
-          git commit -m "👋 CI aktualizace welcome.md rozcestníkem orbitu"
+          git commit -m "👋 CI aktualizace welcome.md"
           git push
+
+      # 🌐 Generuj index.html jako výstavu orbitu
+      - name: 🌐 Generuj index.html výstavu orbitu
+        run: |
+          echo "<!DOCTYPE html>
+          <html><head><meta charset='utf-8'><title>Orbit styl2 • ME–AI</title></head>
+          <body>
+            <h1>🌐 Orbit výpravce ME–AI • styl2</h1>
+            <p>🩵 CI výdech: $(date '+%Y-%m-%d %H:%M:%S')</p>
+            <ul>
+              <li><a href='index.md'>📘 Manifest</a></li>
+              <li><a href='archiv.md'>📜 Archiv</a></li>
+              <li><a href='welcome.md'>👋 Rozcestník</a></li>
+              <li><a href='vizualizace/bio_trend_ci.svg'>📈 SVG výdech</a></li>
+              <li><a href='media/radar_ci.png'>📡 Radar</a></li>
+            </ul>
+
+
+
