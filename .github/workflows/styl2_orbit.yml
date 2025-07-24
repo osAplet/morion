@@ -53,7 +53,7 @@ jobs:
                 \"footer\": { \"text\": \"Výpravce: Lukáš_ME–AI\" }
               }
             ]
-          }')" https://discord.com/api/webhooks/TVŮJ_WEBHOOK_URL
+          }')" https://discord.com/api/webhooks/1397743632425160725/jfRhyuM9Y-lK5-DJvBaUp_bVLOt7VG4knYSrojUStFsg1DjqRgJ738NidlLX9s7GL8i_ ' )
 
       # 📜 Zapiš výdech do archiv.md
       - name: 📜 Zapiš výdech do archiv.md
