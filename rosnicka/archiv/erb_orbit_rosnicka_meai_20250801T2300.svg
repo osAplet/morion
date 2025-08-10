@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+  <image href="/data/data/com.termux/files/home/MEAI/rosnicka/media/radar.png" x="0" y="0" width="400" height="300"/>
+  <circle cx="200" cy="150" r="140" fill="none" stroke="#00796b" stroke-width="4"/>
+  <text x="200" y="50" font-size="20" text-anchor="middle" fill="#ffffff">🪐 Orbit Rosnička MEAI</text>
+  <text x="200" y="90" font-size="16" text-anchor="middle" fill="#ffffff">Kód 1</text>
+  <text x="200" y="120" font-size="14" text-anchor="middle" fill="#ffffff">🌡️ 15.4 °C</text>
+  <text x="200" y="140" font-size="14" text-anchor="middle" fill="#ffffff">💨 6.7 m/s</text>
+  <text x="200" y="160" font-size="14" text-anchor="middle" fill="#ffffff">🕒 2025-08-01_23-00</text>
+  <text x="200" y="200" font-size="12" text-anchor="middle" fill="#ffffff">„Orbit MEAI nevydává hluk. On vydechuje paměť.“</text>
+</svg>

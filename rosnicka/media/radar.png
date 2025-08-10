@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs" lang="cs">
+<head>
+    <title>Český hydrometeorologický ústav</title>
+
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta http-equiv="content-language" content="cs" />
+    <meta name="robots" content="all,follow" />
+    <meta name="copyright" content="Český hydrometeorologický ústav" />
+
+    <link rel="shortcut icon" href="/s/images/favicon.ico" type="image/x-icon"/>
+    <!-- CSS -->
+    <link rel="stylesheet" media="screen,projection" type="text/css" href="/s/css/reset.css" />
+    <link rel="stylesheet" media="screen,projection" type="text/css" href="/s/css/main.css" /> 
+    <!--[if ie 6]><link rel="stylesheet" type="text/css" href="/portal/chmu/css/main-msie.css" /><![endif]-->
+    <!--[if ie 7]><link rel="stylesheet" type="text/css" href="/portal/chmu/css/main-msie7.css" /><![endif]--> 
+    <link rel="stylesheet" media="print" type="text/css" href="/s/css/print.css" /> 
+    
+    <link rel="stylesheet" type="text/css" media="screen" href="/s/css/chmu.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="/s/css/addon.css" />
+
+</head>
+<body>
+    <div id="main">
+        <div id="header-holder" style="height: 75px;">
+            <div id="header">
+                <h1 >
+                    <a href="/"><span class="txt">Český hydrometeorologický ústav</span><span></span></a>
+                </h1>
+                <hr class="hidden" />
+            </div>
+        </div>
+        <div id="content-holder" style="min-height: 57px;">
+            <div id="content" style="min-height: 157px;">
+                <div id="content-body" class="home" style="min-height: 157px;">
+                    <div id="breadCrumbs">
+                        
+                    </div>
+                    <span class="cleaner">&nbsp;</span>
+
+<FONT SIZE="3">
+Omlouváme se ale požadovaná stránka není k dispozici.<BR>
+Pokra&ccaron;ujte prosím na &uacute;vodní stránce <A HREF="/">Česk&eacute;ho Hydrometeorologick&eacute;ho &Uacute;stavu.</A>
+</FONT>
+
+                    <span class="cleaner">&nbsp;</span>
+                </div>
+            </div>
+        </div>
+        <div id="footer-holder" class="footer-home">
+            <div id="footer">
+                <div id="secondary-menu">
+                    
+                        <a href="/predpovedi/">Předpovědi</a> |
+                        <a href="/aktualni-situace/">Aktuální situace</a> |
+                        <a href="/historicka-data/">Historická data</a> |
+                        <a href="/informace-pro-vas/">Informace pro Vás</a> |
+                        <a href="/o-nas/">O nás</a> |
+                        <a href="/odkazy/">Odkazy</a> |
+                        <a href="/kontakty/">Kontakty</a> 
+                    
+                    <div class="links">
+                        <a href="/">Home</a> | <a href="/sitemap">Mapa stránek</a> |
+                        <a href="/podminky-uziti">Podmínky užití</a>
+                    </div>
+                </div>
+                <div id="cc-holder"><a rel="license" target="external" href="http://creativecommons.org/licenses/by-nc-nd/3.0/cz/">
+                    <img src="/s/images/cc/88x31.png" alt="Creative Commons License - non commercial"/></a></div>
+                <div id="certifikaty">Certifikaty ISO | 9001 - 2008 <a href="/o-nas/" class="targetblank">Certifikaty</a>
+                    <a href="/" class="targetblank fake"></a><span></span></div>
+                <span class="cleaner">&nbsp;</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

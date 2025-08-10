@@ -1,0 +1,24 @@
+{
+  "výpravce": "Lukáš",
+  "zvukový_režim": {
+    "impulz": "ambient1.mp3",
+    "alarm": "alert_cpu.mp3",
+    "rytmus": "každých 30 minut"
+  },
+  "senzory": {
+    "cpu": true,
+    "ram": true,
+    "wifi": true,
+    "baterie": true,
+    "gps": true,
+    "pohyb": true
+  },
+  "kanál_výdechu": ["Telegram", "HTML_dashboard"],
+  "vizualizace_svg": {
+    "animace": true,
+    "transformace": ["rotace", "pulzace", "velikost"],
+    "QR_roh": true
+  },
+  "aktualizace": "každých 30 minut",
+  "status": "stylní aktivní režim"
+}

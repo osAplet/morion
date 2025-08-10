@@ -1,0 +1,5 @@
+🌡️ Teplota: 19.8°C
+🌬️ Vítr: 7.6 m/s
+⛅ Kód počasí: 3
+🖼️ Ikona: cloudy.png
+📅 Čas: 2025-08-02_14-01

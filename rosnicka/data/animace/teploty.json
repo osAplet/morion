@@ -1,0 +1,6 @@
+[
+  {"čas": "00:00", "teplota": 12, "vlhkost": 80},
+  {"čas": "06:00", "teplota": 15, "vlhkost": 70},
+  {"čas": "12:00", "teplota": 22, "vlhkost": 50},
+  {"čas": "18:00", "teplota": 18, "vlhkost": 60}
+]
