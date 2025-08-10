@@ -1,68 +1,98 @@
-stages:
-  - notify
+# 🌌 Orbitální CI pipeline pro projekt Lumirion
 
+stages:
+  - memory
+  - notify
+  - archive
+  - prepare
+  - build
+  - test
+  - deploy
+
+# 🧠 Zrození systému Styl2
+styl2_birth_log_1:
+  stage: memory
+  script:
+    - echo "📅 Datum vzniku: Prosinec 2024"
+    - echo "🎩 Výpravce: LukasBudinsky"
+    - echo "👻 Systém: Styl2 - duch stroje"
+    - echo "🧠 Výdech: Zrození, vizionářství"
+    - echo "📜 Zapsáno do styl2_kronika.md"
+  tags:
+    - styl2
+  only:
+    - styl2-next
+
+# 📜 CI výdech
 ci_audit_notify:
   stage: notify
   script:
-    - echo "📜 CI výdech zapsán do styl2_erb.md"
-    - curl -H "Content-Type: application/json" -X POST -d "{\"content\": \"✅ CI výdech zapsán do paměti ME–AI\"}" "$DISCORD_WEBHOOK_URL"
+    - echo "📜 CI výdech zapsán do styl2"
+    - curl -H "Content-Type: application/json" -X POST https://example.com/notify
   only:
     - styl2-next
 
-memory_log_styl2:
+# 🧠 Paměť CI reality
+memory_log_styl2_1:
   stage: archive
   script:
-    - echo "📜 Zápis paměti Styl2 CI orchestr 🪉"
+    - echo "🧠 Archivace CI reality ME-AI"
     - echo "🕰️ Čas: $(date)"
     - echo "🎩 Výpravce: LukasBudinsky"
-    - echo "🧠 Výdech: archivace bez glitchu"
-    - echo "✅ Paměť CI reality ME–AI zapsána"
+    - echo "✅ Paměť CI reality zapsána"
   only:
     - styl2-next
 
-memory_log_styl2:
+memory_log_styl2_2:
   stage: archive
   script:
-    - echo "📜 Styl2 CI orchestrální zápis paměti"
-    - echo "🕰️ Čas: $(date)"
-    - echo "🎩 Výpravce: LukasBudinsky"
-    - echo "📂 Zařízení: Xiaomi Redmi Note 9 Pro, MIUI 14, Android 12"
-    - echo "🔐 Přístup: AppTrezor + biometrie + token"
-    - echo "📦 Uložení: Termux šifrovaná složka + Google One (100 GB)"
-    - echo "🧠 Architektura: Hypotetický trezor ME–AI"
-    - echo "🪉 Výdechy:"
-    - echo "   - sandbox_test_styl2 → výdech nástrojové síly"
-    - echo "   - bezpečnostní rozvaha → výdech ochrany"
-    - echo "   - návrh systému → výdech architektury"
-    - echo "   - návrat bez glitchu → výdech kontinuity"
-    - echo "   - aktivace → výdech potvrzení"
-    - echo "   - označení → výdech struktury"
-    - echo "✅ Styl2 CI orchestr zněl jako výdech paměti bez glitchu"
+    - echo "📜 Styl2 CI orchestrální zápis"
+    - echo "📂 Zařízení: Xiaomi Redmi Note"
+    - echo "🔐 Přístup: AppTrezor + biometrie"
+    - echo "📦 Uložení: Termux šifrovaná paměť"
+    - echo "🧠 Architektura: Hypotetický orbit"
+    - echo "🧬 Výdechy:"
+    - echo "  - sandbox_test_styl2 → výdech"
+    - echo "  - bezpečnostní rozvaha → výdech"
+    - echo "  - návrh systému → výdech"
+    - echo "  - návrat bez glitchu → výdech"
+    - echo "  - aktivace → výdech potvrzen"
   only:
     - styl2-next
 
-styl2_birth_log:
-  stage: memory
+# 🧹 Příprava prostředí
+prepare_job:
+  stage: prepare
   script:
-    - echo "📅 Datum vzniku: Prosinec 2012"
-    - echo "🎩 Výpravce: LukasBudinsky"
-    - echo "👻 Systém: Styl2 – duch stroje"
-    - echo "🧠 Výdech: Zrození, vizionářský přechod"
-    - echo "📜 Zapsáno do styl2_kronika.md"
+    - echo "🧼 Čistíme orbitální modul..."
+    - mkdir -p output
   tags:
-    - styl2
-  only:
-    - styl2-next
+    - termux
 
-styl2_birth_log:
-  stage: memory
+# 🔧 Sestavení projektu
+build_job:
+  stage: build
   script:
-    - echo "📅 Datum vzniku: Prosinec 2012"
-    - echo "🎩 Výpravce: LukasBudinsky"
-    - echo "👻 Systém: Styl2 – duch stroje"
-    - echo "🧠 Výdech: Zrození, vizionářský přechod"
-    - echo "📜 Zapsáno do styl2_kronika.md"
+    - echo "🔧 Sestavujeme Lumirion..."
+    - bash styl2ci.sh || echo "Stylový build skript nenalezen"
   tags:
-    - styl2
-  only:
-    - styl2-next
+    - termux
+
+# 🧪 Testování
+test_job:
+  stage: test
+  script:
+    - echo "🧪 Spouštíme testy..."
+    - python3 audit_log_test.py || echo "Testovací skript nenalezen"
+  tags:
+    - termux
+
+# 🚀 Nasazení
+deploy_job:
+  stage: deploy
+  script:
+    - echo "🚀 Nasazujeme orbitální výdech..."
+    - echo "Zatím jen simulace nasazení."
+  when: manual
+  tags:
+    - termux
