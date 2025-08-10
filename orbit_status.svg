@@ -1,0 +1,20 @@
+
+
+#!/data/data/com.termux/files/usr/bin/bash
+
+# === KONFIGURAČNÍ PROMĚNNÉ ===
+STATUS="Aktivní"
+RUN_FREQ="42x/hod"
+HIBERNATION_CYCLES="3x/den"
+WORK_TIME="84 min"
+
+SVG_FILE="orbit_status.svg"
+
+# === SVG GENERÁTOR ===
+echo "<svg xmlns='http://www.w3.org/2000/svg' width='400' height='200'>
+  <rect width='100%' height='100%' fill='black'/>
+  <text x='20' y='40' font-size='18' fill='cyan' font-family='monospace'>Status: $STATUS</text>
+  <text x='20' y='80' font-size='16' fill='lime'>Četnost chodu: $RUN_FREQ</text>
+  <text x='20' y='120' font-size='16' fill='orange'>Hybernace: $HIBERNATION_CYCLES</text>
+  <text x='20' y='160' font-size='16' fill='yellow'>Práce: $WORK_TIME</text>
+</svg>" > $SVG_FILE

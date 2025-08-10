@@ -1,0 +1,2 @@
+<animateTransform attributeName="transform" type="rotate" from="0 300 200" to="360 300 200" dur="30s" repeatCount="indefinite"/>
+<animate attributeName="r" values="20;40;20" dur="10s" repeatCount="indefinite"/>

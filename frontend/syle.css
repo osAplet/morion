@@ -1,0 +1,55 @@
+/* 🧭 Umístění kontejneru */
+#manifest-container {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+}
+
+/* 🖼️ Styl obrázku erbu */
+#erb {
+  width: 120px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 255, 128, 0.8);
+  animation: pulse 2.5s infinite;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* 🔄 Hover efekt pro erb */
+#erb:hover {
+  transform: scale(1.07);
+}
+
+/* 🌌 Zobrazování manifestu */
+#manifest-text {
+  display: none;
+  position: absolute;
+  top: 140px;
+  left: 0;
+  width: 300px;
+  background-color: #111;
+  color: #0ff;
+  padding: 16px;
+  border-radius: 12px;
+  font-family: 'Courier New', monospace;
+  box-shadow: 0 0 12px #0ff;
+}
+
+/* ✨ Zobrazit manifest při najetí */
+#manifest-container:hover #manifest-text {
+  display: block;
+}
+
+/* 💡 Animace pulzace */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 12px rgba(0, 255, 128, 0.6);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 255, 128, 1);
+  }
+  100% {
+    box-shadow: 0 0 12px rgba(0, 255, 128, 0.6);
+  }
+}

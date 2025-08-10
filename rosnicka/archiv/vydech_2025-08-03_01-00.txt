@@ -1,0 +1,5 @@
+🌡️ Teplota: 14.2°C
+🌬️ Vítr: 6.2 m/s
+⛅ Kód počasí: 61
+🖼️ Ikona: naithcolor.png
+📅 Čas: 2025-08-03_01-00

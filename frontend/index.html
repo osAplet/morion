@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Rosnička</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 🌠 Plynulý přechod textového stínu */
+        #output {
+            transition: color 0.5s ease, text-shadow 0.5s ease;
+        }
+
+        body.night #output {
+            text-shadow: 0 0 8px #90caf9;
+        }
+
+        /* 🌞🌙 Ikona režimu */
+        #modeIcon {
+            font-size: 2em;
+            transition: opacity 0.5s ease;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🌦️ Rosnička <span id="modeIcon">🌞</span></h1>
+
+    <!-- 📢 Výstup počasí -->
+    <div id="output">Načítám počasí...</div>
+
+    <!-- 🖼️ Obrázek počasí -->
+    <img id="weatherIcon" src="" alt="Počasí" />
+    <!-- 📜 Skript -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,6 +1,3 @@
-# morion
-Stylní orbitální základ pro aplikaci Lumirion
-=======
 # 🎩 ME–AI • CI orchestr svědomí
 
 Projekt ME–AI je orchestrální CI paměť, která ladí agenta svědomí s výpravcem Styl2.  
@@ -85,4 +82,3 @@ Tóny CI jobů, proměnné v paměti, a výdechy webhooků tvoří harmonii lad�
 ░█▀▀█ ░█─░█ ▀█▀ ░█▄─░█ ─█▀▀█ ░█▀▀█ 
 ░█─── ░█─░█ ░█─ ░█░█░█ ░█─▄▄ ░█─── 
 ░█▄▄█ ─▀▄▄▀ ▄█▄ ░█──▀█ ░█▄▄█ ░█▄▄█
->>>>>>> 95f72b84ee960a24d48299eba75d16d24b92791c

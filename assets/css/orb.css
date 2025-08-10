@@ -1,0 +1,57 @@
+/* === ZÁKLADNÍ STYL === */
+body {
+  font-family: 'Orbitron', sans-serif;
+  text-align: center;
+  padding: 2em;
+  transition: background-color 0.4s, color 0.4s;
+}
+
+/* === TMAVÝ REŽIM === */
+body.dark-mode {
+  background-color: #0d0d2b;
+  color: #ffffff;
+}
+
+/* === SVĚTLÝ REŽIM === */
+body.light-mode {
+  background-color: #f0f0f0;
+  color: #222222;
+}
+
+/* === TLAČÍTKA === */
+button {
+  background-color: #4bffa5;
+  border: none;
+  padding: 1em 2em;
+  margin: 0.5em;
+  font-size: 1.1em;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #00f7ff;
+}
+
+/* === STATUS PANEL === */
+#statusDisplay {
+  margin-top: 2em;
+  font-size: 1.2em;
+  font-style: italic;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1em;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #4bffa5;
+}
+
+/* === GLOW EFEKT === */
+.glow {
+  box-shadow: 0 0 20px 5px #00ffcc;
+  animation: glowPulse 1.5s infinite alternate;
+}
+
+@keyframes glowPulse {
+  from { box-shadow: 0 0 10px 2px #00ffcc; }
+  to { box-shadow: 0 0 25px 10px #00ffcc; }
+}

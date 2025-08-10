@@ -1,0 +1,45 @@
+<svg width="300" height="300"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+
+  <style>
+    .orbit {
+      fill: none;
+      stroke-width: 2;
+      stroke-dasharray: 4 2;
+    }
+    .text {
+      font-family: sans-serif;
+      font-size: 18px;
+      fill: #ffffff;
+      text-anchor: middle;
+    }
+    .hidden { visibility: hidden; }
+    .visible { visibility: visible; }
+    .background { fill: #0a0f1c; }
+  </style>
+
+  <rect width="300" height="300" class="background"/>
+  <circle cx="150" cy="150" r="100" class="orbit" stroke="#00ffe0"/>
+  <circle cx="150" cy="150" r="80" class="orbit" stroke="#ff4081"/>
+  <circle cx="150" cy="150" r="60" class="orbit" stroke="#40c4ff"/>
+  <circle cx="150" cy="150" r="40" class="orbit" stroke="#cddc39"/>
+
+  <text id="vrstva1" x="150" y="140" class="text visible">🌡️ Teplota: 22.5 °C</text>
+  <text id="vrstva2" x="150" y="140" class="text hidden">💧 Vlhkost: 65 %</text>
+  <text id="vrstva3" x="150" y="140" class="text hidden">🌪️ Vítr: 3.2 m/s</text>
+  <text id="vrstva4" x="150" y="140" class="text hidden">📉 Tlak: 1012 hPa</text>
+
+  <set xlink:href="#vrstva1" attributeName="visibility" to="visible" begin="0s;32s" dur="8s" repeatCount="indefinite"/>
+  <set xlink:href="#vrstva1" attributeName="visibility" to="hidden" begin="8s;40s" dur="0.1s" repeatCount="indefinite"/>
+
+  <set xlink:href="#vrstva2" attributeName="visibility" to="visible" begin="8s;40s" dur="8s" repeatCount="indefinite"/>
+  <set xlink:href="#vrstva2" attributeName="visibility" to="hidden" begin="16s;48s" dur="0.1s" repeatCount="indefinite"/>
+
+  <set xlink:href="#vrstva3" attributeName="visibility" to="visible" begin="16s;48s" dur="8s" repeatCount="indefinite"/>
+  <set xlink:href="#vrstva3" attributeName="visibility" to="hidden" begin="24s;56s" dur="0.1s" repeatCount="indefinite"/>
+
+  <set xlink:href="#vrstva4" attributeName="visibility" to="visible" begin="24s;56s" dur="8s" repeatCount="indefinite"/>
+  <set xlink:href="#vrstva4" attributeName="visibility" to="hidden" begin="32s;64s" dur="0.1s" repeatCount="indefinite"/>
+
+</svg>

@@ -1,0 +1,5 @@
+🌡️ Teplota: 14.9°C
+🌬️ Vítr: 10.7 m/s
+⛅ Kód počasí: 61
+🖼️ Ikona: rain.png
+📅 Čas: 2025-08-01_06-29

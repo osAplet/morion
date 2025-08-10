@@ -1,0 +1,4 @@
+Teplota: 22.5
+Vlhkost: 65
+Vítr: 3.2
+Tlak: 1012

@@ -1,0 +1,5 @@
+🌡️ Teplota: 12.4°C
+🌬️ Vítr: 4.4 m/s
+⛅ Kód počasí: 3
+🖼️ Ikona: naithcolor.png
+📅 Čas: 2025-08-02_05-00

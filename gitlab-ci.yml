@@ -1,0 +1,15 @@
+stages:
+  - test
+
+variables:
+  MEAI_SHERIFF: "LukasBudinsky"
+  AGENT_MODE: "audit"
+  CI_TOKEN: "glptt-xyz"
+
+ci_test_v6:
+  stage: test
+  script:
+    - echo "🎩 Výpravce: $MEAI_SHERIFF • Režim: $AGENT_MODE • Token: $CI_TOKEN"
+    - curl -H "Content-Type: application/json" -X POST \
+        -d "{\"content\": \"🎩 CI výdech: $MEAI_SHERIFF • Režim: $AGENT_MODE • Token: $CI_TOKEN\"}" \
+        "$DISCORD_WEBHOOK_URL"

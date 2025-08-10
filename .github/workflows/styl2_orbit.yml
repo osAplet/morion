@@ -1,0 +1,157 @@
+name: Styl2 Výdech Orbitu ME–AI
+
+on:
+  push:
+    branches:
+      - styl2
+
+jobs:
+  orbit-ci:
+    runs-on: ubuntu-latest
+    steps:
+
+      # 🛸 Zahájení výdechu orbitu
+      - name: 🛸 Zahájení výdechu orbitu
+        run: echo "✅ Stylní výdech styl2 orbitu ME–AI zahájen"
+
+      # 📈 Generuj SVG proud reality
+      - name: 📈 Generuj SVG proud reality
+        run: |
+          echo "<svg xmlns='http://www.w3.org/2000/svg' width='600' height='200'>
+            <text x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-size='24'>
+              CI výdech orbitu • $(date '+%Y-%m-%d %H:%M:%S')
+            </text>
+          </svg>" > rosnicka/vizualizace/bio_trend_ci.svg
+
+          git config --global user.name "CI Výdech Orbitu"
+          git config --global user.email "ci@meai.github"
+          git add rosnicka/vizualizace/bio_trend_ci.svg
+          git commit -m "📈 CI generace SVG výdechu"
+          git push
+
+      # 📢 Embed zpráva se SVG a radarem
+      - name: 📢 Embed zpráva se SVG a radarem
+        run: |
+          curl -X POST -H "Content-Type: application/json" \
+          -d "$(echo '{
+            \"embeds\": [
+              {
+                \"title\": \"📈 SVG Výdech Orbitu ME–AI styl2\",
+                \"description\": \"Orbit právě dýchá SVG proudem.\\n🕒 '"$(date '+%Y-%m-%d %H:%M:%S')"'\",
+                \"image\": {
+                  \"url\": \"https://raw.githubusercontent.com/osAplet/rosnicka-meai/styl2/rosnicka/vizualizace/bio_trend_ci.svg\"
+                },
+                \"color\": 5793266
+              },
+              {
+                \"title\": \"📡 Radar Výdechu orbitu styl2\",
+                \"description\": \"Radar CI výdechu orbitu styl2 • dýchá veřejně.\",
+                \"image\": {
+                  \"url\": \"https://raw.githubusercontent.com/osAplet/rosnicka-meai/styl2/rosnicka/media/radar_ci.png\"
+                },
+                \"color\": 16776960,
+                \"footer\": { \"text\": \"Výpravce: Lukáš_ME–AI\" }
+              }
+            ]
+          }')" https://discord.com/api/webhooks/1397743632425160725/jfRhyuM9Y-lK5-DJvBaUp_bVLOt7VG4knYSrojUStFsg1DjqRgJ738NidlLX9s7GL8i_ ' )
+
+      - name: 📜 Zapiš výdech do archiv.md
+        run: |
+          COUNT=$(grep -c "^## 🧪 Výdech orbitu styl2" rosnicka/archiv.md)
+          NUMBER=$((COUNT + 1))
+
+          echo "## 🧪 Výdech orbitu styl2 č. $NUMBER • $(date '+%Y-%m-%d')" >> rosnicka/archiv.md
+          echo "🕒 Čas: $(date '+%Y-%m-%d %H:%M:%S')" >> rosnicka/archiv.md
+          echo "📈 SVG proud: vizualizace/bio_trend_ci.svg" >> rosnicka/archiv.md
+          echo "📡 Radar: media/radar_ci.png" >> rosnicka/archiv.md
+          echo "📢 Embed zpráva: ✅ odeslána" >> rosnicka/archiv.md
+          echo "🧵 Výpravce: @Lukáš_ME–AI" >> rosnicka/archiv.md
+          echo "---" >> rosnicka/archiv.md
+
+          git add rosnicka/archiv.md
+          git commit -m "📜 CI zápis výdechu č. $NUMBER do archiv.md"
+          git push
+      - name: 🧵 Zapiš nitku výdechu do threads.md
+        run: |
+          COUNT=$(grep -c "^## 🧪 Výdech orbitu styl2" rosnicka/archiv.md)
+          NUMBER=$((COUNT + 1))
+
+          echo "### 🧵 Thread $NUMBER • $(date '+%Y-%m-%d %H:%M:%S')" >> rosnicka/threads.md
+          echo "- Výdech SVG: vizualizace/bio_trend_ci.svg" >> rosnicka/threads.md
+          echo "- Radar obraz reality: media/radar_ci.png" >> rosnicka/threads.md
+          echo "- Embed zpráva: ✅ odeslána" >> rosnicka/threads.md
+          echo "- Archiv: archiv.md výdech č. $NUMBER" >> rosnicka/threads.md
+          echo "- Výpravce: @Lukáš_ME–AI" >> rosnicka/threads.md
+          echo "---" >> rosnicka/threads.md
+
+          git add rosnicka/threads.md
+          git commit -m "🧵 Zápis nitky výdechu č. $NUMBER do threads.md"
+          git push
+    
+      # 📝 Aktualizuj index.md
+      - name: 📝 Aktualizuj index.md
+        run: |
+          echo "# 🌐 Orbit výpravce ME–AI • Styl2 Výdech" > rosnicka/index.md
+          echo "" >> rosnicka/index.md
+          echo "🩵 CI výdech proběhl: $(date '+%Y-%m-%d %H:%M:%S')" >> rosnicka/index.md
+          echo "- 📜 Archiv: archiv.md" >> rosnicka/index.md
+          echo "- 📈 SVG proud: vizualizace/bio_trend_ci.svg" >> rosnicka/index.md
+          echo "- 📡 Radar: media/radar_ci.png" >> rosnicka/index.md
+          echo "- 📢 Embed zpráva: ✅ odeslána" >> rosnicka/index.md
+          echo "- 🧵 Výpravce: @Lukáš_ME–AI" >> rosnicka/index.md
+
+          git add rosnicka/index.md
+          git commit -m "📝 CI aktualizace index.md"
+          git push
+
+      # 📘 Aktualizuj README.md
+      - name: 📘 Aktualizuj README.md
+        run: |
+          echo "# 🌐 Rosnička ME–AI • CI Výstava styl2" > rosnicka/README.md
+          echo "" >> rosnicka/README.md
+          echo "🩵 CI výdech styl2 právě proběhl: $(date '+%Y-%m-%d %H:%M:%S')" >> rosnicka/README.md
+          echo "- 📜 Archiv: archiv.md" >> rosnicka/README.md
+          echo "- 📈 SVG proud: vizualizace/bio_trend_ci.svg" >> rosnicka/README.md
+          echo "- 📡 Radar: media/radar_ci.png" >> rosnicka/README.md
+          echo "- 📢 Embed zpráva: ✅ odeslána" >> rosnicka/README.md
+          echo "- 🧵 Výpravce: @Lukáš_ME–AI" >> rosnicka/README.md
+
+          git add rosnicka/README.md
+          git commit -m "📘 CI aktualizace README.md"
+          git push
+
+      # 👋 Aktualizuj welcome.md
+      - name: 👋 Aktualizuj welcome.md
+        run: |
+          echo "# 👋 Vítej v orbitu ME–AI • Styl2 Rozcestník" > rosnicka/welcome.md
+          echo "" >> rosnicka/welcome.md
+          echo "🩵 CI výdech styl2 proběhl: $(date '+%Y-%m-%d %H:%M:%S')" >> rosnicka/welcome.md
+          echo "- 📘 Manifest: index.md" >> rosnicka/welcome.md
+          echo "- 📜 Archiv: archiv.md" >> rosnicka/welcome.md
+          echo "- 📈 SVG proud: vizualizace/bio_trend_ci.svg" >> rosnicka/welcome.md
+          echo "- 📡 Radar: media/radar_ci.png" >> rosnicka/welcome.md
+          echo "- 📢 Embed zpráva: ✅ odeslána" >> rosnicka/welcome.md
+          echo "- 🧵 Výpravce: @Lukáš_ME–AI" >> rosnicka/welcome.md
+
+          git add rosnicka/welcome.md
+          git commit -m "👋 CI aktualizace welcome.md"
+          git push
+
+      # 🌐 Generuj index.html jako výstavu orbitu
+      - name: 🌐 Generuj index.html výstavu orbitu
+        run: |
+          echo "<!DOCTYPE html>
+          <html><head><meta charset='utf-8'><title>Orbit styl2 • ME–AI</title></head>
+          <body>
+            <h1>🌐 Orbit výpravce ME–AI • styl2</h1>
+            <p>🩵 CI výdech: $(date '+%Y-%m-%d %H:%M:%S')</p>
+            <ul>
+              <li><a href='index.md'>📘 Manifest</a></li>
+              <li><a href='archiv.md'>📜 Archiv</a></li>
+              <li><a href='welcome.md'>👋 Rozcestník</a></li>
+              <li><a href='vizualizace/bio_trend_ci.svg'>📈 SVG výdech</a></li>
+              <li><a href='media/radar_ci.png'>📡 Radar</a></li>
+            </ul>
+
+
+

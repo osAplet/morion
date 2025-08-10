@@ -1,0 +1,62 @@
+✅ Výdech uložen: /data/data/com.termux/files/home/MEAI/rosnicka/archiv/vydech_2025-08-01_06-53.txt
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/MEAI/rosnicka/vydech_rosnicka_meai.py", line 64, in <module>
+    soubor_svg = f"{archiv_slozka}/erb_rosnicka_meai_{datetime.now().strftime('%Y%m%dT%H%M')}.svg"
+                                                      ^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'now'
+✅ Výdech uložen: /data/data/com.termux/files/home/MEAI/rosnicka/archiv/vydech_2025-08-01_06-54.txt
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/MEAI/rosnicka/vydech_rosnicka_meai.py", line 64, in <module>
+    soubor_svg = f"{archiv_slozka}/erb_rosnicka_meai_{datetime.now().strftime('%Y%m%dT%H%M')}.svg"
+                                                      ^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'now'
+✅ Výdech uložen: /data/data/com.termux/files/home/MEAI/rosnicka/archiv/vydech_2025-08-01_06-55.txt
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/MEAI/rosnicka/vydech_rosnicka_meai.py", line 64, in <module>
+    soubor_svg = f"{archiv_slozka}/erb_rosnicka_meai_{datetime.now().strftime('%Y%m%dT%H%M')}.svg"
+                                                      ^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'now'
+✅ Výdech uložen: /data/data/com.termux/files/home/MEAI/rosnicka/archiv/vydech_2025-08-01_06-56.txt
+Traceback (most recent call last):
+  File "/data/data/com.termux/files/home/MEAI/rosnicka/vydech_rosnicka_meai.py", line 64, in <module>
+    soubor_svg = f"{archiv_slozka}/erb_rosnicka_meai_{datetime.now().strftime('%Y%m%dT%H%M')}.svg"
+                                                      ^^^^^^^^^^^^
+AttributeError: module 'datetime' has no attribute 'now'
+
+🕒 Výdech proveden v 2025-08-01_07-56 → /data/data/com.termux/files/home/MEAI/rosnicka/archiv/erb_rosnicka_meai_20250801T0756.svg
+🕒 Výdech proveden v 2025-08-01_08-03 → /data/data/com.termux/files/home/MEAI/rosnicka/archiv/erb_rosnicka_meai_20250801T0803.svg
+🕒 Orbitální výdech v 2025-08-01_08-08 → /data/data/com.termux/files/home/MEAI/rosnicka/archiv/erb_orbit_rosnicka_meai_20250801T0808.svg
+🕒 Orbitální výdech v 2025-08-01_09-00 → /data/data/com.termux/files/home/MEAI/rosnicka/archiv/erb_orbit_rosnicka_meai_20250801T0900.svg
+🕒 Orbitální výdech v 2025-08-01_10-00 → /data/data/com.termux/files/home/MEAI/rosnicka/archiv/erb_orbit_rosnicka_meai_20250801T1000.svg
+🕒 Orbitální výdech v 2025-08-01_11-00 → /data/data/com.termux/files/home/MEAI/rosnicka/archiv/erb_orbit_rosnicka_meai_20250801T1100.svg
+🕒 Orbitální výdech v 2025-08-01_12-00 → /data/data/com.termux/files/home/MEAI/rosnicka/archiv/erb_orbit_rosnicka_meai_20250801T1200.svg
+🕒 Orbitální výdech v 2025-08-01_13-00 → /data/data/com.termux/files/home/MEAI/rosnicka/archiv/erb_orbit_rosnicka_meai_20250801T1300.svg
+🕒 Orbitální výdech v 2025-08-01_14-00 → /data/data/com.termux/files/home/MEAI/rosnicka/archiv/erb_orbit_rosnicka_meai_20250801T1400.svg
+🕒 Orbitální výdech v 2025-08-01_17-00 → /data/data/com.termux/files/home/MEAI/rosnicka/archiv/erb_orbit_rosnicka_meai_20250801T1700.svg
+🕒 Orbitální výdech v 2025-08-01_18-00 → /data/data/com.termux/files/home/MEAI/rosnicka/archiv/erb_orbit_rosnicka_meai_20250801T1800.svg
+🕒 Orbitální výdech v 2025-08-01_19-00 → /data/data/com.termux/files/home/MEAI/rosnicka/archiv/erb_orbit_rosnicka_meai_20250801T1900.svg
+🕒 Orbitální výdech v 2025-08-01_20-00 → /data/data/com.termux/files/home/MEAI/rosnicka/archiv/erb_orbit_rosnicka_meai_20250801T2000.svg
+🕒 Orbitální výdech v 2025-08-01_21-00 → /data/data/com.termux/files/home/MEAI/rosnicka/archiv/erb_orbit_rosnicka_meai_20250801T2100.svg
+🕒 Orbitální výdech v 2025-08-01_22-00 → /data/data/com.termux/files/home/MEAI/rosnicka/archiv/erb_orbit_rosnicka_meai_20250801T2200.svg
+🕒 Orbitální výdech v 2025-08-01_23-00 → /data/data/com.termux/files/home/MEAI/rosnicka/archiv/erb_orbit_rosnicka_meai_20250801T2300.svg
+🕒 Orbitální výdech v 2025-08-02_00-00 → /data/data/com.termux/files/home/MEAI/rosnicka/archiv/erb_orbit_rosnicka_meai_20250802T0000.svg
+🕒 Orbitální výdech v 2025-08-02_01-00 → /data/data/com.termux/files/home/MEAI/rosnicka/archiv/erb_orbit_rosnicka_meai_20250802T0100.svg
+🕒 Orbitální výdech v 2025-08-02_02-00 → /data/data/com.termux/files/home/MEAI/rosnicka/archiv/erb_orbit_rosnicka_meai_20250802T0200.svg
+🕒 Orbitální výdech v 2025-08-02_03-00 → /data/data/com.termux/files/home/MEAI/rosnicka/archiv/erb_orbit_rosnicka_meai_20250802T0300.svg
+🕒 Orbitální výdech v 2025-08-02_04-00 → /data/data/com.termux/files/home/MEAI/rosnicka/archiv/erb_orbit_rosnicka_meai_20250802T0400.svg
+🕒 Orbitální výdech v 2025-08-02_05-00 → /data/data/com.termux/files/home/MEAI/rosnicka/archiv/erb_orbit_rosnicka_meai_20250802T0500.svg
+🕒 Orbitální výdech v 2025-08-02_06-00 → /data/data/com.termux/files/home/MEAI/rosnicka/archiv/erb_orbit_rosnicka_meai_20250802T0600.svg
+🕒 Orbitální výdech v 2025-08-02_06-30 → /data/data/com.termux/files/home/MEAI/rosnicka/archiv/erb_orbit_rosnicka_meai_20250802T0630.svg
+🕒 Orbitální výdech v 2025-08-02_07-00 → /data/data/com.termux/files/home/MEAI/rosnicka/archiv/erb_orbit_rosnicka_meai_20250802T0700.svg
+🕒 Orbitální výdech v 2025-08-02_08-00 → /data/data/com.termux/files/home/MEAI/rosnicka/archiv/erb_orbit_rosnicka_meai_20250802T0800.svg
+🕒 Orbitální výdech v 2025-08-02_09-00 → /data/data/com.termux/files/home/MEAI/rosnicka/archiv/erb_orbit_rosnicka_meai_20250802T0900.svg
+🕒 Orbitální výdech v 2025-08-02_10-00 → /data/data/com.termux/files/home/MEAI/rosnicka/archiv/erb_orbit_rosnicka_meai_20250802T1000.svg
+🕒 Orbitální výdech v 2025-08-02_14-01 → /data/data/com.termux/files/home/MEAI/rosnicka/archiv/erb_orbit_rosnicka_meai_20250802T1401.svg
+🕒 Orbitální výdech v 2025-08-02_15-01 → /data/data/com.termux/files/home/MEAI/rosnicka/archiv/erb_orbit_rosnicka_meai_20250802T1501.svg
+🕒 Orbitální výdech v 2025-08-02_17-00 → /data/data/com.termux/files/home/MEAI/rosnicka/archiv/erb_orbit_rosnicka_meai_20250802T1700.svg
+🕒 Orbitální výdech v 2025-08-02_19-00 → /data/data/com.termux/files/home/MEAI/rosnicka/archiv/erb_orbit_rosnicka_meai_20250802T1900.svg
+🕒 Orbitální výdech v 2025-08-02_20-00 → /data/data/com.termux/files/home/MEAI/rosnicka/archiv/erb_orbit_rosnicka_meai_20250802T2000.svg
+🕒 Orbitální výdech v 2025-08-02_22-00 → /data/data/com.termux/files/home/MEAI/rosnicka/archiv/erb_orbit_rosnicka_meai_20250802T2200.svg
+🕒 Orbitální výdech v 2025-08-02_23-00 → /data/data/com.termux/files/home/MEAI/rosnicka/archiv/erb_orbit_rosnicka_meai_20250802T2300.svg
+🕒 Orbitální výdech v 2025-08-03_00-00 → /data/data/com.termux/files/home/MEAI/rosnicka/archiv/erb_orbit_rosnicka_meai_20250803T0000.svg
+🕒 Orbitální výdech v 2025-08-03_01-00 → /data/data/com.termux/files/home/MEAI/rosnicka/archiv/erb_orbit_rosnicka_meai_20250803T0100.svg
