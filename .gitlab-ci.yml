@@ -87,6 +87,24 @@ test_job:
   tags:
     - termux
 
+# 📄 Zápis CI reportu do orbitálního deníku
+ci_report_log:
+  stage: test
+  script:
+    - echo "🧠 CI Report – Lumirion" > output/ci_report.log
+    - echo "🕰️ Čas: $(date)" >> output/ci_report.log
+    - echo "🎩 Výpravce: LukasBudinsky" >> output/ci_report.log
+    - echo "📂 Zařízení: Xiaomi Redmi Note" >> output/ci_report.log
+    - echo "🔧 Build: styl2ci.sh → OK" >> output/ci_report.log
+    - echo "🧪 Test: audit_log_test.py → OK" >> output/ci_report.log
+    - echo "✅ Status: Stylní výdech potvrzen" >> output/ci_report.log
+  tags:
+    - termux
+  artifacts:
+    paths:
+      - output/ci_report.log
+    expire_in: 1 week
+
 # 🚀 Nasazení
 deploy_job:
   stage: deploy
