@@ -1,0 +1,12 @@
+stages:
+  - .pre
+  - test
+  - .post
+ci_test_v1:
+  stage: test
+  script:
+    - echo "🧪 Probíhá CI test paměti ME–AI"
+  image:
+    name: python:3.11
+default:
+  image: python:3.11

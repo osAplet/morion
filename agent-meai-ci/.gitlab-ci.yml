@@ -1,0 +1,77 @@
+stages:
+  - test
+  - audit
+
+variables:
+  MEAI_SHERIFF: "LukasBudinsky"
+  AGENT_MODE: "audit"
+  DISCORD_WEBHOOK_URL: "https://discord.com/api/webhooks/TVUJ-WEBHOOK-URL"
+  DISCORD_WEBHOOK_AUDIT: "https://discord.com/api/webhooks/DRUHY-WEBHOOK-URL"
+
+ci_test_v1:
+  stage: test
+  script:
+    - echo "🖊️ Styl2 test v1: echo výdech paměti"
+
+ci_test_v2:
+  stage: test
+  script:
+    - echo "🐍 Test v2: Spouštíme"
+    - python agent.py
+
+ci_test_v3:
+  stage: test
+  before_script:
+    - pip install python-dotenv
+  script:
+    - echo "🔐 Test v3: Načítám CI proměnné"
+    - python -c "from dotenv import load_dotenv; load_dotenv()"
+
+ci_test_v4:
+  stage: audit
+  script:
+    - echo "📡 Styl2 CI výdech v4 aktivován"
+    - >
+      curl -H "Content-Type: application/json" -X POST \
+      -d "{\"content\": \"🎩 CI Styl2 výdech v4 aktivován\"}" \
+      "$DISCORD_WEBHOOK_URL"
+  when: on_success
+  tags: [shell]
+
+ci_test_v5:
+  stage: test
+  script:
+    - echo "🧪 Spouštím agent_v2.py"
+    - python agent_v2.py
+
+ci_test_v6:
+  stage: test
+  script:
+    - echo "📢 CI výdech aktivován"
+    - >
+      curl -H "Content-Type: application/json" -X POST \
+      -d "{\"content\": \"🎩 Výpravce: $MEAI_SHERIFF • Režim: $AGENT_MODE\"}" \
+      "$DISCORD_WEBHOOK_URL"
+  when: on_success
+
+ci_audit_notify:
+  stage: audit
+  script:
+    - echo "🕯️ Styl2 audit log" > audit_log.txt
+    - echo "Výpravce: $MEAI_SHERIFF" >> audit_log.txt
+    - echo "Režim: $AGENT_MODE" >> audit_log.txt
+    - echo "Větev: $CI_COMMIT_REF_NAME" >> audit_log.txt
+    - echo "Pipeline ID: $CI_PIPELINE_ID" >> audit_log.txt
+    - echo "📬 Styl2 CI notify: pipeline dokončena" >> audit_log.txt
+    - >
+      curl -H "Content-Type: application/json" -X POST \
+      -d "{\"content\": \"✅ CI pipeline dokončena ve větvi $CI_COMMIT_REF_NAME\"}" \
+      "$DISCORD_WEBHOOK_AUDIT"
+    - cat audit_log.txt
+  artifacts:
+    paths:
+      - audit_log.txt
+  when: always
+  tags: [shell]
+
+
